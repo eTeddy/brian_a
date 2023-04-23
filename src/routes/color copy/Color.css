@@ -1,0 +1,19 @@
+#color-container {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 20px 0 20px 0;
+  width: 100vw;
+  height: 100%;
+  text-align: center;
+}
+#color-container * {
+  margin: 10px auto 20px auto;
+}
+.color_display {
+  background: white;
+  width: 250px;
+  height: 150px;
+  margin: 10px auto 10px auto;
+  border-radius: 10px;
+}

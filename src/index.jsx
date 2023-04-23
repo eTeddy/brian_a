@@ -11,6 +11,7 @@ import {
 import Clock from "./routes/clock/Clock";
 import Home from "./routes/home/Home";
 import Dice from "./routes/dice/Dice";
+import Color from "./routes/color/Color"
 import Navbar from "./components/Navbar";
 import "./App.css";
 
@@ -18,7 +19,10 @@ import "./App.css";
 
 const AppLayout = () => (
   <>
-    <Navbar />
+    <div className="navbar-container">
+      <Navbar /> 
+    </div>
+    
     <Outlet />
   </>
 );
@@ -48,6 +52,10 @@ const router = createHashRouter([
       {
         path: "dice",
         element: <Dice />,
+      },
+      {
+        path: "color",
+        element: <Color />,
       },
     ],
   },
