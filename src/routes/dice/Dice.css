@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.dice_container {
+  background: #21481e;
+  color: white;
+  height: 100%;
+  margin: 0;
+  padding: 20px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Dice_wrapper{
+  background: #eeeeee;  
+  width: 300px;  
+  margin: 20px 0 20px 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+
+
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+
+/*
+  Dice Styles
+*/
+
+.dice {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 100px 0 100px 0;
+  transform-style: preserve-3d;
+  transition: 1s ease;
+}
+
+@keyframes rolling {
+  50% {
+      transform: rotateX(455deg) rotateY(455deg);
+  }
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 5px solid #f6f3f0;
+  transform-style: preserve-3d;
+  background: linear-gradient(
+      145deg, #dddbd8, #fff
+  );
+}
+
+.face::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: #f6f3f0;
+  transform: translateZ(-1px);
+}
+
+.face::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #131210;
+}
+
+.front {
+  transform: translateZ(50px);
+}
+
+.back {
+  transform: rotateX(180deg) translateZ(50px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.front::after {
+  color: rgb(240, 161, 14);
+  width: 30px;
+  height: 30px;
+  background: #f63330;
+  margin: -15px 0 0 -15px;
+}
+
+.back::after {
+  color: rgb(19, 230, 15);
+  margin: -35px 0 0 -30px;
+  box-shadow: 40px 0,
+              0 25px,
+              40px 25px,
+              0 50px,
+              40px 50px;
+}
+
+.top::after {
+  color: rgb(15, 200, 224);
+  margin: -30px 0 0 -30px;
+  box-shadow: 40px 40px;
+}
+
+.bottom::after {
+  color: #180cee;
+  margin: -36px 0 0 -36px;
+  box-shadow: 26px 26px,
+              52px 52px,
+              52px 0,
+              0 52px;
+}
+
+.right::after {
+  color: rgb(227, 139, 24);
+  margin: -30px 0 0 -30px;
+  box-shadow: 40px 0,
+  0 40px,
+  40px 40px;
+}
+
+.left::after {
+  color: #e413ba;
+  margin: -35px 0 0 -35px;
+  box-shadow: 25px 25px,
+              50px 50px;
+}
+
+/*
+  Roll Button styles
+*/
+
+.roll {
+  background: #21481e; 
+  color: white;
+  margin: 0 0 50px 0;
+  cursor: pointer;
+  width: 90%;
+  padding: 10px;
+  border-radius: 3px;
+  font: 700 16px 'Montserrat';
+  transition: .4s;
+}
+
+.roll:hover {
+  background: #445942;
+  color: white;
+}
+a {
+  color: white;
+  margin: 20px;
+}
